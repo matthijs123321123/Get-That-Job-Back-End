@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "ba86e065-63c4-434f-bba8-82bcb302bdfc",
+		"name": "Blogs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:5000/blogs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "YOUR_SECRET_KEY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{site}}/blogs",
+					"host": [
+						"{{site}}"
+					],
+					"path": [
+						"blogs"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{site}}/add_blog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDIyNzI5NjYsIm5iZiI6MTYwMjI3Mjk2NiwianRpIjoiZDgyNmM2YWMtMDRjNC00ZjNiLWE4OWUtNDAwMGMwMmI2ZGRlIiwiZXhwIjoxNjAyMjczODY2LCJpZGVudGl0eSI6ImFkbWluX2VtYWlsX2FkZHJlc3MiLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MifQ.QmTdvtRH01rZ1r7HbMzW-XPJPjwtYuwiRj43nuh4xu8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\" : \"First Post\",\n\t\"content\" : \"content\",\n\t\"feature_image\" : \"picture\",\n\t\"tags\" : [\"test\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{site}}/add_blog",
+					"host": [
+						"{{site}}"
+					],
+					"path": [
+						"add_blog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{site}}/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"admin_email_address\",\n\t\"password\" : \"admin_password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{site}}/login",
+					"host": [
+						"{{site}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{site}}/login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\" : \"Test_Admin\",\r\n\t\"password\" : \"123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{site}}/login",
+					"host": [
+						"{{site}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{site}}/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\" : \"Test_Admin\",\r\n\t\"password\" : \"123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{site}}/login",
+					"host": [
+						"{{site}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{site}}/adduser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDI0NTQ1MTcsIm5iZiI6MTYwMjQ1NDUxNywianRpIjoiMTJiYmE1NWEtM2I5Ny00YTFjLThjYjctMjljYTI1MDUzOTA1IiwiZXhwIjoxNjAyNDU1NDE3LCJpZGVudGl0eSI6ImFkbWluX2VtYWlsX2FkZHJlc3MiLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MifQ.6cPohnWpAVpHYB69CDT0tsnyejExinpGfmlsy05Vivg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\" : \"Matt@matt.mat3\",\r\n\t\"password\" : \"123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{site}}/adduser",
+					"host": [
+						"{{site}}"
+					],
+					"path": [
+						"adduser"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c3c2302d-27d7-4e97-9088-88e745839240",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "171eeb80-4b9d-436e-8507-3b22c5a8b8f1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "2cf13817-4e77-4343-8683-b59e8e49a54e",
+			"key": "site",
+			"value": "localhost:5000"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
