@@ -93,7 +93,6 @@ Send this to /upimages to upload a image
 
 use /getallimg to get all images paths
 
-
-Run for Hopp
+use:
 set FLASK_APP=api 
 flash run
