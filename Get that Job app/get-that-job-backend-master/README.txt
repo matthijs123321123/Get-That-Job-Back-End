@@ -36,7 +36,7 @@ Use this call to add a blog to the database
 	"tags" : [""]
 }
 
-"/blogs" GET (dont need token)
+"/blogs" GET
 Use this call to get all blogs from the database
 {
     "all_blogs": [
@@ -62,7 +62,7 @@ User can login by sending a json in the following structure POST to the /login p
 	"password" : ""
 }
 
-if the log in is correct the following response will be recieved:
+if the log in is correct the following response will be received:
 
 {
     "email": "",
