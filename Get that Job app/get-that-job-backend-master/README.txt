@@ -1,6 +1,6 @@
 REQUIRES PYTHON 3.7!
 
-To install the server run install.CMD
+To install the server run install.CMD(Note: THIS WILL UNINSTALL ALL VERSIONS OF PACKAGES THAT DONT MEET THE VERSIONS OF THIS API)
 
 Than to run the server use RUN.CDM
 
